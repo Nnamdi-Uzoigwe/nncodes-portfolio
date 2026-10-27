@@ -4,8 +4,8 @@ export const siteConfig = {
   role: "Mobile App Developer",
   description:
     "Mobile app developer building React Native apps for businesses, startups and founders.",
-  url: "https://example.com",
-  email: "hello@example.com",
+  url: "https://nncodes-portfolio-c1nt.vercel.app/",
+  email: "uzonnamdi31.com",
   nav: [
     { label: "Work", href: "/#work" },
     { label: "Web", href: "/#web" },
@@ -20,8 +20,8 @@ export const siteConfig = {
     { name: "Scanly", slug: "scanly" },
   ],
   socials: {
-    github: "https://github.com/",
-    linkedin: "https://linkedin.com/",
-    tiktok: "https://tiktok.com/",
+    github: "https://github.com/Nnamdi-Uzoigwe",
+    linkedin: "https://www.linkedin.com/in/nnamdi-uzoigwe-3783a0417/",
+    tiktok: "https://www.tiktok.com/@nncodes",
   },
 } as const;

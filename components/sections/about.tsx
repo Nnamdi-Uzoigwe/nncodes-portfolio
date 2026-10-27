@@ -51,7 +51,7 @@ export function About() {
             </Reveal>
           </div>
 
-          <Reveal delay={0.1}>
+          {/* <Reveal delay={0.1}>
             <div
               className="relative mx-auto h-64 w-full max-w-[220px]"
               aria-hidden="true"
@@ -65,7 +65,7 @@ export function About() {
                 className="right-0 bottom-0 rotate-3"
               />
             </div>
-          </Reveal>
+          </Reveal> */}
         </div>
 
         <Reveal className="mt-12">
