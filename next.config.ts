@@ -5,7 +5,11 @@ const nextConfig: NextConfig = {
   experimental: {
     agentFeedback: true,
   },
+  allowedDevOrigins: ['172.20.10.2'],
   cacheComponents: true,
+  images: {
+    qualities: [75, 90],
+  },
   partialPrefetching: true,
   turbopack: {
     rules: {
