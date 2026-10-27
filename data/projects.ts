@@ -32,18 +32,18 @@ export const projects: Project[] = [
     status: "MVP",
     tags: ["React Native", "Expo", "TypeScript", "SQLite"],
     screen: screenFor("momentum"),
-    github: "https://github.com/",
+    github: "https://github.com/Nnamdi-Uzoigwe/momentum",
   },
   {
     slug: "novara",
     name: "Novara",
     tagline: "E-commerce store app",
     description:
-      "A store app with onboarding, authentication and product browsing, themed with a clean custom design system.",
-    status: "In development",
+      "A clothing store app with onboarding, authentication and product browsing, themed with a clean custom design system.",
+    status: "Personal project",
     tags: ["React Native", "Expo", "TypeScript"],
     screen: screenFor("novara"),
-    github: "https://github.com/",
+    github: "https://github.com/Nnamdi-Uzoigwe/Novara",
   },
   {
     slug: "spendwise",
@@ -51,10 +51,10 @@ export const projects: Project[] = [
     tagline: "Expense tracker",
     description:
       "An expense tracker for logging spending, grouping it by category and seeing where the money goes.",
-    status: "Personal project",
-    tags: ["React Native", "Expo", "TypeScript"],
+    status: "In development",
+    tags: ["React Native", "Expo", "TypeScript", "Jest", "SQlite"],
     screen: screenFor("spendwise"),
-    github: "https://github.com/",
+    github: "https://github.com/Nnamdi-Uzoigwe/spendwise",
   },
   {
     slug: "bobo",
@@ -65,7 +65,7 @@ export const projects: Project[] = [
     status: "In development",
     tags: ["React Native", "Expo", "NestJS", "MongoDB", "Zustand"],
     screen: screenFor("bobo"),
-    github: "https://github.com/",
+    github: "https://github.com/Nnamdi-Uzoigwe/Bobo-app",
   },
   {
     slug: "scanly",
@@ -74,9 +74,9 @@ export const projects: Project[] = [
     description:
       "A utility app that turns photos into shareable PDF documents, built around the device camera and file handling.",
     status: "Personal project",
-    tags: ["React Native", "Expo", "TypeScript"],
+    tags: ["React Native", "Expo", "TypeScript", "SQlite"],
     screen: screenFor("scanly"),
-    github: "https://github.com/",
+    github: "https://github.com/Nnamdi-Uzoigwe/scanly",
   },
 ];
 
@@ -93,29 +93,29 @@ export type WebProject = {
 
 export const webProjects: WebProject[] = [
   {
-    name: "Cave Management",
+    name: "deCave Management",
     label: "Live production platform",
     description:
       "A booking and management platform used day to day by a real client, covering availability, bookings and admin workflows.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
     live: true,
-    url: "https://example.com",
+    url: "https://decavemgt.com",
   },
   {
-    name: "Knowing Solution",
+    name: "Norwyn Solution",
     label: "Client website",
     description:
       "A responsive marketing site for a legal and cybersecurity firm, structured around clear services and a simple lead flow.",
     tags: ["Next.js", "Tailwind CSS"],
-    url: "https://example.com",
+    url: "https://norwynsolution.com",
   },
   {
-    name: "Company website",
+    name: "Novtryx website",
     label: "Company site",
     description:
       "A fast, responsive brand site with a clean layout and straightforward contact options.",
     tags: ["Next.js", "Tailwind CSS"],
-    url: "https://example.com",
+    url: "https://novtryx.com",
   },
 ];
 
