@@ -1,26 +1,423 @@
+/* 
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-plum: #5b1f5e;
+  --color-plum-soft: #f4eef5;
+  --color-ink: #0a0a0a;
+  --color-muted: #6b7280;
+  --color-line: rgba(0, 0, 0, 0.1);
+
+  --font-heading: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-body), ui-sans-serif, system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #eeeeee;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.92;
+}
+
+::selection {
+  background: var(--color-plum);
+  color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (pointer: fine) {
+  .custom-cursor-active,
+  .custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html:has([data-cursor-light]:hover) .portfolio-cursor-dot {
+    background-color: #ffffff !important;
+  }
+
+  html:has([data-cursor-light]:hover) .portfolio-cursor-ring {
+    border-color: #ffffff !important;
+  }
+}
+
+[data-menu-orb] > button {
+  outline: 1px solid rgba(255, 255, 255, 0.45);
+  outline-offset: 3px;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-heading: var(--font-archivo), sans-serif;
+  --font-display: var(--font-archivo), sans-serif;
+  --font-body: var(--font-manrope), sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background: #ffffff;
+  color: #0a0a0a;
+}
+
+html.dark body,
+html.dark .bg-white {
+  background-color: #111013;
+}
+
+html.dark .text-black,
+html.dark .text-neutral-950,
+html.dark .text-neutral-900,
+html.dark .text-neutral-800 {
+  color: #f4eff5;
+}
+
+html.dark .text-neutral-600,
+html.dark .text-neutral-500 {
+  color: #b5acb8;
+}
+
+html.dark .text-neutral-400 {
+  color: #958b99;
+}
+
+html.dark .text-\[\#5b1f5e\] {
+  color: #d5a4db;
+}
+
+html.dark .bg-neutral-50,
+html.dark .bg-neutral-100,
+html.dark .bg-white\/70 {
+  background-color: #211d25;
+}
+
+html.dark [class*="border-black/"] {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+html.dark .bg-\[\#FAFAF8\] .bg-white {
+  background-color: #ffffff;
+}
+
+html.dark .bg-\[\#FAFAF8\] .text-neutral-400 {
+  color: #737373;
+}
+
+html.dark .portfolio-cursor-dot {
+  background-color: #ffffff !important;
+}
+
+html.dark .portfolio-cursor-ring {
+  border-color: #ffffff !important;
+}
+
+.hero-dot-field {
+  color: rgba(91, 31, 94, 0.2);
+
+  background-image: radial-gradient(
+    circle,
+    currentColor 1px,
+    transparent 1.2px
+  );
+  background-size: 26px 26px;
+
+  -webkit-mask-image:
+    linear-gradient(to right, transparent, black 45%),
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 15%,
+      black 75%,
+      transparent
+    );
+  -webkit-mask-composite: source-in;
+
+  mask-image:
+    linear-gradient(to right, transparent, black 45%),
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 15%,
+      black 75%,
+      transparent
+    );
+  mask-composite: intersect;
+}
+
+html.dark .hero-dot-field {
+  color: rgba(230, 200, 235, 0.18);
+}
+
+
+.hero-app-marquee {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 7%,
+    black 93%,
+    transparent
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 7%,
+    black 93%,
+    transparent
+  );
+}
+ */
+
+
+ @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Shared design colors */
+@theme {
+  --color-plum: #5b1f5e;
+  --color-plum-soft: #f4eef5;
+  --color-ink: #0a0a0a;
+  --color-muted: #6b7280;
+  --color-line: rgba(0, 0, 0, 0.1);
+}
+
+/* Theme-dependent page colors */
+:root {
+  color-scheme: light;
+
+  --page-background: #f5efe6;
+  --page-foreground: #0a0a0a;
+}
+
+html.dark {
+  color-scheme: dark;
+
+  --page-background: #111013;
+  --page-foreground: #f4eff5;
+}
+
+/* Font variables and theme-aware Tailwind utilities */
+@theme inline {
+  --font-heading: var(--font-archivo), sans-serif;
+  --font-display: var(--font-archivo), sans-serif;
+  --font-body: var(--font-manrope), sans-serif;
+
+  --color-page: var(--page-background);
+  --color-page-text: var(--page-foreground);
+}
+
+/* Base */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--page-background);
+}
+
+body {
+  background-color: var(--page-background);
+  color: var(--page-foreground);
+  font-family: var(--font-body);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.92;
+}
+
+::selection {
+  background: var(--color-plum);
+  color: #ffffff;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Custom cursor */
+@media (pointer: fine) {
+  .custom-cursor-active,
+  .custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+/* White cursor over plum sections */
+@media (hover: hover) and (pointer: fine) {
+  html:has([data-cursor-light]:hover) .portfolio-cursor-dot {
+    background-color: #ffffff !important;
+  }
+
+  html:has([data-cursor-light]:hover) .portfolio-cursor-ring {
+    border-color: #ffffff !important;
+  }
+}
+
+/* Orb separation from the background */
+[data-menu-orb] > button {
+  outline: 1px solid rgba(255, 255, 255, 0.45);
+  outline-offset: 3px;
+}
+
+/* Existing white cards retain their dark-mode treatment */
+html.dark .bg-white {
+  background-color: #111013;
+}
+
+/* Existing text compatibility */
+html.dark .text-black,
+html.dark .text-neutral-950,
+html.dark .text-neutral-900,
+html.dark .text-neutral-800 {
+  color: #f4eff5;
+}
+
+html.dark .text-neutral-600,
+html.dark .text-neutral-500 {
+  color: #b5acb8;
+}
+
+html.dark .text-neutral-400 {
+  color: #958b99;
+}
+
+html.dark .text-\[\#5b1f5e\] {
+  color: #d5a4db;
+}
+
+/* Existing secondary surfaces */
+html.dark .bg-neutral-50,
+html.dark .bg-neutral-100,
+html.dark .bg-white\/70 {
+  background-color: #211d25;
+}
+
+html.dark [class*="border-black/"] {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Preserve light browser chrome inside website previews */
+html.dark .bg-\[\#FAFAF8\] .bg-white {
+  background-color: #ffffff;
+}
+
+html.dark .bg-\[\#FAFAF8\] .text-neutral-400 {
+  color: #737373;
+}
+
+/* White cursor in dark mode */
+html.dark .portfolio-cursor-dot {
+  background-color: #ffffff !important;
+}
+
+html.dark .portfolio-cursor-ring {
+  border-color: #ffffff !important;
+}
+
+/* Right-quarter hero texture */
+.hero-dot-field {
+  color: rgba(91, 31, 94, 0.2);
+
+  background-image: radial-gradient(
+    circle,
+    currentColor 1px,
+    transparent 1.2px
+  );
+
+  background-size: 26px 26px;
+
+  -webkit-mask-image:
+    linear-gradient(to right, transparent, black 45%),
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 15%,
+      black 75%,
+      transparent
+    );
+
+  -webkit-mask-composite: source-in;
+
+  mask-image:
+    linear-gradient(to right, transparent, black 45%),
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 15%,
+      black 75%,
+      transparent
+    );
+
+  mask-composite: intersect;
+}
+
+html.dark .hero-dot-field {
+  color: rgba(230, 200, 235, 0.18);
+}
+
+/* Transparent marquee edges work in both themes */
+.hero-app-marquee {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 7%,
+    black 93%,
+    transparent
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 7%,
+    black 93%,
+    transparent
+  );
+}
+
+/* Hide the page scrollbar without disabling scrolling */
+html {
+  scrollbar-width: none;
+}
+
+/* Fallback for browsers using WebKit scrollbar styling */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Deep charcoal headings in light mode */
+html:not(.dark) :is(h1, h2, h3, h4, h5, h6) {
+  color: #242124;
+}
+
+/* Keep headings white on the plum Contact section */
+html:not(.dark) #contact :is(h1, h2, h3, h4, h5, h6) {
+  color: #ffffff;
 }
