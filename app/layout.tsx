@@ -5,6 +5,7 @@ import "./globals.css";
 import MenuOrb from "@/components/MenuOrb";
 import CustomCursor from "@/components/CustomCursor";
 import ThemeProvider from "@/components/ThemeProvider";
+import { Analytics } from "@vercel/analytics/next";
 
 const righteous = Righteous({
   subsets: ["latin"],
@@ -70,6 +71,7 @@ export default function RootLayout({
         <CustomCursor />
         <MenuOrb />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
