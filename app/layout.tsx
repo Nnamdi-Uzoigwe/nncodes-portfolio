@@ -69,12 +69,11 @@ export default function RootLayout({
     >
       <body className="font-body antialiased">
         <ThemeProvider>
-           <SmoothScroll>
-
-        {children}
-        <CustomCursor />
-        <MenuOrb />
-           </SmoothScroll>
+          <SmoothScroll>
+            {children}
+            <CustomCursor />
+            <MenuOrb />
+          </SmoothScroll>
         </ThemeProvider>
         <Analytics />
       </body>
