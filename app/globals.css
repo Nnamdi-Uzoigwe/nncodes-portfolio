@@ -232,7 +232,7 @@ html.dark {
 
 /* Base */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   background-color: var(--page-background);
 }
 

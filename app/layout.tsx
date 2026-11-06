@@ -6,6 +6,8 @@ import MenuOrb from "@/components/MenuOrb";
 import CustomCursor from "@/components/CustomCursor";
 import ThemeProvider from "@/components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/next";
+import SmoothScroll from "@/components/SmoothScroll";
+import "lenis/dist/lenis.css";
 
 const righteous = Righteous({
   subsets: ["latin"],
@@ -67,9 +69,12 @@ export default function RootLayout({
     >
       <body className="font-body antialiased">
         <ThemeProvider>
+           <SmoothScroll>
+
         {children}
         <CustomCursor />
         <MenuOrb />
+           </SmoothScroll>
         </ThemeProvider>
         <Analytics />
       </body>
