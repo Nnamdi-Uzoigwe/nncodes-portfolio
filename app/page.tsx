@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import MobileProjects from "@/components/MobileProjects";
 import SelectedWork from "@/components/SelectedWork";
-import SmoothScroll from "@/components/SmoothScroll";
+// import SmoothScroll from "@/components/SmoothScroll";
 import type { Metadata } from "next";
 
 
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <SmoothScroll>
+    // <SmoothScroll>
 
     <main className="bg-page text-page-text">
       <Hero />
@@ -26,6 +26,6 @@ export default function Home() {
       <Contact />
       <Footer />
     </main>
-    </SmoothScroll>
+    // </SmoothScroll>
   );
 }
