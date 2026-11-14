@@ -90,6 +90,7 @@ export const skillGroups = [
       "Prisma",
       "MongoDB",
       "JWT auth",
+      "Neon",
     ],
   },
   {

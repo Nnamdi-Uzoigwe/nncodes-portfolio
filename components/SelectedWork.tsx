@@ -116,8 +116,7 @@ export default function SelectedWork() {
               text-neutral-600 sm:text-base
             "
           >
-            Mobile is my focus of recent but I also build and ship websites
-            for real clients—here are three of them.
+            Mobile development has been my recent focus, but I also build and ship websites for real clients. Here are three examples.
           </p>
         </motion.div>
 

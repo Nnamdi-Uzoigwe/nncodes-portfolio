@@ -70,7 +70,7 @@ export default function Hero() {
           </span>
 
           <span className="text-neutral-500">
-            Available for projects
+            Available for projects & roles
           </span>
         </motion.div>
 
@@ -134,8 +134,7 @@ export default function Hero() {
               sm:text-lg lg:text-xl
             "
           >
-            I build fast, smooth apps for businesses, startups and
-            founders—from the first screen to the app store.
+            I build fast, smooth mobile apps and websites for businesses, startups, and founders—from the first design to launch.
           </p>
 
           <div className="mt-7 flex flex-wrap items-center gap-x-7 gap-y-4 sm:mt-8">
