@@ -21,7 +21,7 @@ export const webProjects: WebProject[] = [
     name: "deCave Management",
     label: "Live production platform",
     description:
-      "A booking and management platform used day to day by a real client, covering availability, bookings and admin workflows.",
+      "Booking and admin system for a live events business. Over 1000 tickets sold through the platform, with availability, bookings and client management handled in one place. Delivered in 4 weeks.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Express JS", "Redis"],
     live: true,
     url: "https://decavemgt.com",
@@ -38,7 +38,7 @@ export const webProjects: WebProject[] = [
     name: "Norwyn Solution",
     label: "Client website",
     description:
-      "A responsive marketing site for a legal and cybersecurity firm, structured around clear services and a simple lead flow.",
+      "Marketing site for a legal and cybersecurity firm. Rewrote their services into clear pages with a single lead form, so enquiries arrive with context attached.",
     tags: ["Next.js", "Tailwind CSS"],
     live: true,
     url: "https://norwynsolution.com",
@@ -55,7 +55,7 @@ export const webProjects: WebProject[] = [
     name: "Novtryx website",
     label: "Company site",
     description:
-      "A fast, responsive brand site with a clean layout and straightforward contact options.",
+      "Brand and company site with a fast, responsive build and one obvious way to get in touch. Pages load clean on a cheap phone and a slow connection, which is what most of their visitors are on.",
     tags: ["Next.js", "Tailwind CSS"],
     live: true,
     url: "https://novtryx.com",
@@ -147,7 +147,7 @@ export const projects: Project[] = [
     name: "Momentum",
     tagline: "Habit and goal tracker",
     description:
-      "A habit and goal tracker with daily check ins, streaks and progress views, built to make consistency visible.",
+      "Habit tracker with daily check-ins, streaks and progress views. Same build a coach or clinic would use to keep clients showing up.",
     status: "MVP",
     tags: ["React Native", "Expo", "TypeScript", "SQLite"],
     screen: screenFor("momentum"),
@@ -158,7 +158,7 @@ export const projects: Project[] = [
     name: "Novara",
     tagline: "E-commerce store app",
     description:
-      "A clothing store app with onboarding, authentication and product browsing and checkout, themed with a clean custom design system.",
+      "Clothing store app: onboarding, authentication, product browsing, and checkout, on its own design systtem. The exact structure a retailer needs to sell from a phone.",
     status: "Personal project",
     tags: ["React Native", "Expo", "TypeScript"],
     screen: screenFor("novara"),
@@ -169,7 +169,7 @@ export const projects: Project[] = [
     name: "SpendWise",
     tagline: "Expense tracker",
     description:
-      "An expense tracker for logging spending, grouping it by category and seeing where the money goes.",
+      "Expense tracker that logs spending, groups it by category and shows where the money goes. A small business version of this replaces the notebook every vendor still keeps.",
     status: "In development",
     tags: ["React Native", "Expo", "TypeScript", "Jest", "SQLite"],
     screen: screenFor("spendwise"),
@@ -180,7 +180,7 @@ export const projects: Project[] = [
     name: "Bobo",
     tagline: "Food delivery app",
     description:
-      "A full stack food delivery app with onboarding, cart, checkout, favorites and notifications, backed by its own API.",
+      "Full-stack food delivery app: onboarding, cart, checkout, favorites and notifications, on an API I built in NestJS and MongoDB. Built to the spec a restaurant needs.",
     status: "In development",
     tags: ["React Native", "Expo", "NestJS", "MongoDB", "Zustand"],
     screen: screenFor("bobo"),
@@ -191,7 +191,7 @@ export const projects: Project[] = [
     name: "Scanly",
     tagline: "Image to PDF scanner",
     description:
-      "A utility app that turns photos into shareable PDF documents, built around the device camera and file handling.",
+      "Turns phone photos into clean, shareable PDFs using the device camera and file handling. Utility build, useful for anyone digitising receipts or paperwork.",
     status: "Personal project",
     tags: ["React Native", "Expo", "TypeScript", "SQLite"],
     screen: screenFor("scanly"),

@@ -13,13 +13,19 @@ import { ArrowDownRight } from "lucide-react";
 import { skillGroups, timeline } from "@/data/projects";
 
 const STATEMENT = [
-  { text: "I'm Nnamdi, a mobile and web developer who cares about" },
-  { text: "how things feel", accent: true },
-  { text: "as much as how they work. I build practical products with" },
-  { text: "thoughtful interactions", accent: true },
-  {
-    text: "—from independent mobile apps to websites people use every day.",
-  },
+  // { text: "I'm Nnamdi, a mobile and web developer who cares about" },
+  // { text: "how things feel", accent: true },
+  // { text: "as much as how they work. I build practical products with" },
+  // { text: "thoughtful interactions", accent: true },
+  // {
+  //   text: "—from independent mobile apps to websites people use every day.",
+  // },
+
+{ text: "I'm Nnamdi, a mobile and web developer building" },
+{ text: "clean, usable products", accent: true },
+{ text: "that feel" },
+{ text: "intuitive", accent: true },
+{ text: "from the first interaction—turning ideas into polished apps and websites people actually enjoy using." },
 ];
 
 const WORDS = STATEMENT.flatMap((part) =>
