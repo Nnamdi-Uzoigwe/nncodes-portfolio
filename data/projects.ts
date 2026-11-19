@@ -67,6 +67,23 @@ export const webProjects: WebProject[] = [
       frame: "#C6DDD4",
     },
   },
+  {
+    id: "04",
+    name: "Tavola Web Application",
+    label: "Restaurant SaaS",
+    description:
+      "A QR-powered digital menu platform that helps restaurants showcase their menus, manage dishes and categories, and let guests browse meals and send orders directly through WhatsApp. Features restaurant management, interactive menus, and secure authentication.",
+    tags: ["Next.js", "Typescript", "Tailwind CSS", "Neon", "PostgreSQL", "Drizzle ORM", "BetterAuth"],
+    live: true,
+    url: "https://tavola-web.vercel.app",
+    image: "/projects/tavola.png",
+    palette: {
+      stage: "#f2e4d0",
+      glow: "#E7D5AE",
+      accent: "#8A682B",
+      frame: "#E4D8C1",
+    },
+  },
 ];
 
 export const skillGroups = [
